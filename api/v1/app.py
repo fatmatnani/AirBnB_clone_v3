@@ -16,15 +16,18 @@ app.register_blueprint(app_views)
 
 
 # Declare a method to handle app.teardown_appcontext that calls storage.close()
+
 @app.teardown_appcontext
 def close_storage(exception):
     """Closes the database storage"""
     storage.close()
 
+
 @app.errorhandler(404)
 def not_found(error):
     """Handle 404 errors"""
-    return jsonify({"error": "Not found"}), 404
+    return (jsonify({"error": "Not found"}), 404)
+
 
 # Inside if __name__ == "__main__":, run your Flask server (variable app)
 if __name__ == "__main__":
