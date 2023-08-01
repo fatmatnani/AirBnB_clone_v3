@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""
+This module contains the Flask instance for the API.
+"""
 from flask import Flask
 from models import storage
 from api.v1.views import app_views
@@ -11,12 +15,6 @@ app.register_blueprint(app_views)
 def teardown_db(exception):
     """Close storage on teardown."""
     storage.close()
-
-
-@app.errorhandler(404)
-def page_not_foun(error):
-    """ Loads a custom 404 page not found """
-    return make_response(jsonify({"error": "Not found"}), 404)
 
 
 if __name__ == "__main__":
