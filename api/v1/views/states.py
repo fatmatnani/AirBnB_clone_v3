@@ -2,7 +2,7 @@
 """
 This module contains the State view methods.
 """
-from flask import jsonify, request, abort
+from flask import jsonify, request, abort, make_response
 from models import storage
 from models.state import State
 from api.v1.views import app_views
@@ -21,9 +21,9 @@ def get_states():
 def create_state():
     """Create a State object."""
     if not request.get_json():
-        abort(400, description="Not a JSON")
+        return make_response(jsonify({"error": "Not a JSON"}), 400)
     elif 'name' not in request.get_json():
-        abort(400, description="Missing name")
+        return make_response(jsonify({"error": "Missing name"}), 400)
     else:
         data = request.get_json()
         instance = State(**data)
