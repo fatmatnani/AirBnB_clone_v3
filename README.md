@@ -154,9 +154,9 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time. 
 
 ## Authors
-Chukwuemeka Chukwu - [Github](https://github.com/EJmpa) / [Twitter](https://twitter.com/EJ_mpa)
-Fatma Tnani - [Github](https://github.com/fatmatnani)
-Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
+Chukwuemeka Chukwu - [Github](https://github.com/EJmpa) / [Twitter](https://twitter.com/EJ_mpa)\
+Fatma Tnani - [Github](https://github.com/fatmatnani)\
+Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)\
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)
 
 Second part of Airbnb: Joann Vuong
