@@ -68,7 +68,7 @@ def update_city(city_id):
     """Updates a City object by its ID"""
     city = storage.get(City, city_id)
     if not city:
-        abort(404))
+        abort(404)
 
     if not request.get_json():
         return make_response(jsonify({"error": "Not a JSON"}), 400)
